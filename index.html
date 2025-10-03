@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<main class="container">
+    <h1>Conversor de moedas</h1>
+    <form action="./pages/funçoesmoeda.php" method="post">
+        <label for="valor">Valor em Reais (R$):</label>
+        <input id="valor" name="valor" type="text" placeholder="Ex: 100" required>
+
+        <br><br>
+
+        <label for="moeda">Converter para:</label>
+        <select id="moeda" name="moeda" required>
+            <option value="moeda">MOEDA</option>
+            <option value="usd">Dólar (USD)</option>
+            <option value="eur">Euro (EUR)</option>
+            <option value="ars">Peso Argentino (ARS)</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Converter</button>
+    </form>
+</main>
+</body>
+</html>
