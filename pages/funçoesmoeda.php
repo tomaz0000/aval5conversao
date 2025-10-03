@@ -2,7 +2,7 @@
 
 $valor = $_POST['valor'] ?? '';
 $moeda     = $_POST['moeda'] ?? '';
-
+$resultado_str = '';
 function validarEntrada($valor, $moeda) { $valor = str_replace(',', '.', $valor); if (!is_numeric($valor) || (float)$valor <= 0) { return " <h1>Erro: informe um número válido maior que zero. </h1>"; } return true; }
 
 echo validarEntrada($valor, $moeda);
@@ -19,8 +19,17 @@ function converterDolar($valor) {
 
 }
 
+
+
 function converterPeso($valor) {
     $resultado = $valor * 48.50;
     return "Peso: " . number_format($resultado, 2, ',', '.') . " ARS";
 }
-echo converterPeso($valor);
+
+function exibirMensagem($valor, $resultado_str) {
+    return "<h1>Resultado da conversão</h1>  <p>R$ " . number_format($valor, 2, ',', '.') . " = $resultado_str</p>";
+
+}
+
+
+echo exibirMensagem($valor, $resultado_str);
