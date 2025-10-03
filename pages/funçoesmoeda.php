@@ -15,5 +15,12 @@ function converterDolar($valor) {
     function converterEuro($valor) {
     $resultado = $valor * 0.18;
     return "Euro: " . number_format($resultado, 2, ',', '.') . " €";
+
+
 }
-echo converterEuro($valor);
+
+function converterPeso($valor) {
+    $resultado = $valor * 48.50;
+    return "Peso: " . number_format($resultado, 2, ',', '.') . " ARS";
+}
+echo converterPeso($valor);
