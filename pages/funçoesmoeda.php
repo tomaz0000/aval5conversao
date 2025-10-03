@@ -10,4 +10,10 @@ echo validarEntrada($valor, $moeda);
 function converterDolar($valor) {
     $resultado = $valor * 0.20;
     return "Dólar: " . number_format($resultado, 2, ',', '.') . " US$"; }
-    echo converterDolar($valor);
+  
+
+    function converterEuro($valor) {
+    $resultado = $valor * 0.18;
+    return "Euro: " . number_format($resultado, 2, ',', '.') . " €";
+}
+echo converterEuro($valor);
