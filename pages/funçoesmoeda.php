@@ -7,3 +7,7 @@ function validarEntrada($valor, $moeda) { $valor = str_replace(',', '.', $valor)
 
 echo validarEntrada($valor, $moeda);
 
+function converterDolar($valor) {
+    $resultado = $valor * 0.20;
+    return "Dólar: " . number_format($resultado, 2, ',', '.') . " US$"; }
+    echo converterDolar($valor);
